@@ -5,25 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>App Launcher</title>
   <style>
-    body {
+    /* Remove padding and margins to make the iframe fill 100% of the screen */
+    html, body {
       margin: 0;
       padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
       background: #1e1e1e;
-      color: white;
-      font-family: sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+    }
+
+    /* Style the iframe container to act as your app window */
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
 <body>
-  <p>Loading application...</p>
 
-  <script>
-    // Automatically redirects to your target app immediately when loaded
-    window.location.replace('https://cdn.jsdelivr.net/gh/breezeontop/svg@latest/index.svg');
-  </script>
+  <!-- Displays the app inside your local window without changing the page URL -->
+  <iframe src="https://cdn.jsdelivr.net/gh/breezeontop/svg@latest/index.svg"></iframe>
+
 </body>
 </html>
